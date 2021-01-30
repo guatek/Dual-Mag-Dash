@@ -65,5 +65,5 @@ If you need support beyond github please use our [Contact Page](http://www.guate
 
 - Copyright 2020 Creative Tim (https://www.creative-tim.com)
 - Copyright 2021 Guatek (http://www.guatek.com)
-- Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
+- Licensed under MIT (https://github.com/guatek/Dual-Mag-Dash/blob/master/LICENSE.md)
 
