@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2020 Creative Tim (Black-Dashboard-React codebase)
 
-Copyright (c) 2020 Guatek (Additions to support Dual-Mag-Dash)
+Copyright (c) 2021 Guatek (Additions to support Dual-Mag-Dash)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
