@@ -19,6 +19,7 @@ LowMagROIs.defaultProps = {
   cameraName: 'Low Mag',
   images: window.low_mag_cam_rois,
   pixelSize: 6.79,
+  sortMethodList: ["Height", "Timestamp", "Area", "Aspect Ratio", "Major Axis Length"],
 };
 
 export default LowMagROIs;

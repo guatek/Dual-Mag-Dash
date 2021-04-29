@@ -48,10 +48,19 @@ function ImageViewer(props) {
   let sortedImages = [];
 
   if (sortMethod === "Height") {
-    sortedImages = props.images.sort((a, b) => (a.fullHeight > b.fullHeight) ? -1 : 1)
+    sortedImages = props.images.sort((a, b) => (a.fullHeight > b.fullHeight) ? -1 : 1);
+  }
+  else if (sortMethod === "Area") {
+    sortedImages = props.images.sort((a, b) => (a.area > b.area) ? -1 : 1);
+  }
+  else if (sortMethod === "Aspect Ratio") {
+    sortedImages = props.images.sort((a, b) => (a.aspectRatio > b.aspectRatio) ? -1 : 1);
+  }
+  else if (sortMethod === "Major Axis Length") {
+    sortedImages = props.images.sort((a, b) => (a.majorAxisLength > b.majorAxisLength) ? -1 : 1);
   }
   else {
-    sortedImages = props.images.sort((a, b) => (a.caption > b.caption) ? -1 : 1)
+    sortedImages = props.images.sort((a, b) => (a.caption > b.caption) ? -1 : 1);
   }
   return (
     <>
@@ -100,7 +109,7 @@ function ImageViewer(props) {
                 </Row>
               </CardHeader>
               <CardBody style={{padding: "10px"}}>
-                <div style={{backgroundColor: "#000", borderRadius: "4px", padding: "4px"}}>
+                <div style={{backgroundColor: "#000", borderRadius: "4px", padding: "4px", height: "75vh", overflowY: "scroll"}}>
                   <ImageGridResponsive
                     isROI={props.isROI} 
                     images={sortedImages.slice(pageNumber*pageSize,(pageNumber+1)*pageSize)} 
@@ -127,7 +136,7 @@ ImageViewer.defaultProps = {
   images: [],
   pixelSize: 6.79,
   pageSize: 200,
-  pageSizeList: [100, 200, 400, 800, 1000],
+  pageSizeList: [100, 200, 400, 800, 1000, 2000, 4000, 10000],
   sortMethod: "Height",
   sortMethodList: ["Height", "Timestamp"],
   imageContrast: 100,

@@ -74,7 +74,12 @@ function ImageGridResponsive(props) {
             
         let wt = image.thumbnailWidth;
         let ht = image.thumbnailHeight;
-        let sizeCaption = parseInt(w * props.pixelSize) + " um";
+        let imageInfo = image.src.split('\\').pop().split('/').pop().split("-"); // split file name into tokens
+        let frameNumber = 0;
+        if (imageInfo.length >=4) {
+          frameNumber = imageInfo[3]
+        }
+        let sizeCaption = "F: " + parseInt(frameNumber) + ", " + parseInt(w * props.pixelSize) + " um";
 
         return (
         
@@ -104,8 +109,8 @@ function ImageGridResponsive(props) {
                 marginTop: (ht > wt ? 0 : props.boxSize/2 - ht * (props.boxSize-5) / wt / 2)
               }}
             >
-              <div style={{position: "absolute", bottom: "0", textAlign: "center", width: "100%", borderTop: "1px solid #333"}}>{sizeCaption}</div>
             </div>
+            <div style={{position: "relative", marginTop: "-20px", zIndex: "100", width: props.boxSize, textAlign: "center", width: "100%", borderTop: "1px solid #333"}}>{sizeCaption}</div>
           </div>
       )})}
     </div>

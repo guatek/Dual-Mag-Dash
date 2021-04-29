@@ -19,6 +19,7 @@ HighMagROIs.defaultProps = {
   cameraName: 'High Mag',
   images: window.high_mag_cam_rois,
   pixelSize: 0.87,
+  sortMethodList: ["Height", "Timestamp", "Area", "Aspect Ratio", "Major Axis Length"],
 };
 
 export default HighMagROIs;
