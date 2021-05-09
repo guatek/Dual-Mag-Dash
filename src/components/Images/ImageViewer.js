@@ -60,7 +60,7 @@ function ImageViewer(props) {
     sortedImages = props.images.sort((a, b) => (a.majorAxisLength > b.majorAxisLength) ? -1 : 1);
   }
   else {
-    sortedImages = props.images.sort((a, b) => (a.caption > b.caption) ? -1 : 1);
+    sortedImages = props.images.sort((a, b) => (a.caption > b.caption) ? 1 : -1);
   }
   return (
     <>

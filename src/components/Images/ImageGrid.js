@@ -96,11 +96,11 @@ function ImageGridResponsive(props) {
           >
             <div
               style={{
-                filter: "contrast(" + props.imageContrast + "%) brightness(" + props.imageBrightness + "%)",
-                backgroundImage: "url(" + image.thumbnail + ")", 
-                backgroundPosition: "center",
+                //filter: "contrast(" + props.imageContrast + "%) brightness(" + props.imageBrightness + "%)",
+                //backgroundImage: "url(" + image.thumbnail + ")", 
+                //backgroundPosition: "center",
                 verticalAlign: "center",
-                backgroundSize: "cover",
+                //backgroundSize: "cover",
                 position: "relative",
                 display: "block",
                 width:  (wt > ht ? props.boxSize-5 : wt * (props.boxSize-5) / ht), 
@@ -109,6 +109,14 @@ function ImageGridResponsive(props) {
                 marginTop: (ht > wt ? 0 : props.boxSize/2 - ht * (props.boxSize-5) / wt / 2)
               }}
             >
+              <img src={image.thumbnail} 
+                style={{
+                  filter: "contrast(" + props.imageContrast + "%) brightness(" + props.imageBrightness + "%)",
+                  width:  (wt > ht ? props.boxSize-5 : wt * (props.boxSize-5) / ht), 
+                  height: (ht > wt ? props.boxSize-5 : ht * (props.boxSize-5) / wt)
+                  }}
+              >
+              </img>
             </div>
             <div style={{position: "relative", marginTop: "-20px", zIndex: "100", width: props.boxSize, textAlign: "center", width: "100%", borderTop: "1px solid #333"}}>{sizeCaption}</div>
           </div>
